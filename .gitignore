@@ -16,7 +16,7 @@ media
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
-*.idea/*
+*.idea/
 
 # Distribution / packaging 
 .Python build/ 
