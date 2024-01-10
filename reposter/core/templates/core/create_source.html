@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Get source</title>
+</head>
+<body>
+<form method="post" >
+    <h2>Enter data</h2>
+    {% csrf_token %}
+    <input type="url" name="url" placeholder="Enter source url" >
+    <input type="submit" value="Get source">
+</form>
+</body>
+</html>

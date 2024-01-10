@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Source List</title>
+</head>
+<body>
+<ul>
+    {% for obj in object_list %}
+        <li>
+        <a href={% url "source" obj.id %} >{{ obj }} / post id - {{ obj.post_id }}</a>
+        </li>
+    {% endfor %}
+</ul>
+</body>
+</html>

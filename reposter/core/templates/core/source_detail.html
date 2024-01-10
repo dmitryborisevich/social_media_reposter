@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Source Detail</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Description</th>
+        <th>Instagram</th>
+    </tr>
+    <tr>
+        <td>{{ object }}</td>
+        <td>
+            {% if object.instagram_published %}
+                Published
+                {% else %}
+                <form method="post" action="{% url 'source' pk=object.id %}?repost_to=instagram">
+                    {% csrf_token %}
+                    <input type="submit" value="Publish" />
+                </form>
+            {% endif %}
+        </td>
+    </tr>
+</table>
+</body>
+</html>
