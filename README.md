@@ -16,20 +16,20 @@ docker compose -f docker-compose.yml up --build
 ### Example
 `Step 1`
 
-![plot](/home/dmitry/Изображения/1.jpeg)
+![screenshot](screenshots/1.jpeg)
 
 `Step 2`
 
-![plot](/home/dmitry/Изображения/2.jpeg)
+![screenshot](screenshots/2.jpeg)
 
 `Step 3`
 
-![plot](/home/dmitry/Изображения/3.jpeg)
+![screenshot](screenshots/3.jpeg)
 
 `Step 4`
 
-![plot](/home/dmitry/Изображения/4.jpeg)
+![screenshot](screenshots/4.jpeg)
 
 `Result`
 
-![plot](/home/dmitry/Изображения/5.jpeg)
+![screenshot](screenshots/5.jpeg)
