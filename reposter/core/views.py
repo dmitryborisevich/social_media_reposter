@@ -18,14 +18,14 @@ class CreateSourceView(TemplateView):
             source = models.Source.objects.create(**data.get('source_data'))
             images = data.get('images', [])
 
-            for i in range(len(images)):
-                if i == 0:
-                    qr_image = qr_service.create_qrcode_image(images[i], data['source_data']['url'])
+            for index, image in enumerate(images):
+                if index == 0:
+                    qr_image = qr_service.create_qrcode_image(image, data['source_data']['url'])
                     source.image_set.create(
                         image=InMemoryUploadedFile(qr_image, None, 'test.jpg', 'image/jpeg', qr_image.tell, None)
                     )
 
-                source.image_set.create(image=ImageFile(images[i], name='image.jpeg'))
+                source.image_set.create(image=ImageFile(image, name='image.jpeg'))
 
             return JsonResponse({
                 'success': True,

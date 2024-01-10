@@ -10,7 +10,7 @@ def instagram_repost(source_object):
         client.album_upload(
             paths=[image.image.path for image in source_object.image_set.all()],
             caption=f'{source_object.name} - {source_object.description} | {source_object.price}$.\n'
-                    f'Scan QR code for redirect to our website, more photo and information about the current ad'
+                    f'Scan QR code for redirect to our website, more photos and information about the current ad'
         )
         client.logout()
         return True
